@@ -14,6 +14,24 @@
         android:theme="@style/Theme.ProMeet"
         tools:targetApi="31">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditaEventoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditaGrupoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GruposActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CadastroGrupoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CadastroActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
@@ -23,8 +41,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true"/>
+            android:name=".AgendaActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
