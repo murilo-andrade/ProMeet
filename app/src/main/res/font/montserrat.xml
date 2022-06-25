@@ -6,7 +6,6 @@
         android:font="@font/montserrat_regular" />
     <font
         android:fontStyle="normal"
-        android:fontWeight="700"
-        android:font="@font/montserrat_regular" />
-
+        android:fontWeight="500"
+        android:font="@font/montserrat_medium" />
 </font-family>

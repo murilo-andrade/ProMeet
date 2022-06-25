@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "br.com.promeet.app"
-        minSdk 21
+        minSdk 28
         targetSdk 32
         versionCode 1
         versionName "0.1"
