@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">ProMeet</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="novo_grupo">Novo Grupo</string>
+    <string name="agenda">Agenda</string>
+    <string name="grupos">Grupos</string>
+    <string name="editar_grupo">Editar Grupo</string>
+    <string name="novo_evento">Novo Evento</string>
+    <string name="nome">Nome</string>
+    <string name="data">Data</string>
+    <string name="hora">Hora</string>
+    <string name="local">Local</string>
+    <string name="grupo">Grupo</string>
+    <string name="agendar">Agendar</string>
+    <string name="email" translatable="false">E-Mail</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="repetir_senha">Repita a senha</string>
+    <string name="voltar">Voltar</string>
+    <string name="cor">Cor</string>
+    <string name="participantes">Participantes</string>
+    <string name="adicionar_pessoa">Adicionar Pessoa</string>
+    <string name="alterar">Alterar</string>
+    <string name="editar_evento">Editar Evento</string>
+    <string name="adiar">Adiar</string>
 </resources>

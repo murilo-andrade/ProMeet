@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ProMeet</string>
+    <string name="cadastro">Sign-Up</string>
+    <string name="novo_grupo">New Group</string>
+    <string name="agenda">Meetings</string>
+    <string name="grupos">Groups</string>
+    <string name="editar_grupo">Edit Group</string>
+    <string name="novo_evento">New Meeting</string>
+    <string name="nome">Name</string>
+    <string name="data">Date</string>
+    <string name="hora">Time</string>
+    <string name="local">Place</string>
+    <string name="grupo">Group</string>
+    <string name="agendar">Assign</string>
+    <string name="senha">Password</string>
+    <string name="entrar">Login</string>
+    <string name="cadastrar">Sign-Up</string>
+    <string name="repetir_senha">Repeat Password</string>
+    <string name="voltar">Back</string>
+    <string name="cor">Color</string>
+    <string name="participantes">Attendees</string>
+    <string name="adicionar_pessoa">Add Person</string>
+    <string name="alterar">Update</string>
+    <string name="editar_evento">Edit Meeting</string>
+    <string name="adiar">Postpone</string>
 </resources>
