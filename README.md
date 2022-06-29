@@ -24,7 +24,5 @@ Mapa Conceitual do Aplicativo
 Storyboard demonstrando os principais usos
 ![StoryBoard - ProMeet](https://user-images.githubusercontent.com/21364420/176426709-2a349d8c-59fa-4bef-8c9c-4ddb63946573.jpg)
 
-Protótipo com as ligações entre activities[br]
+Protótipo com as ligações entre activities - [Link para o Protótipo Interativo](https://app.uizard.io/p/7e35d407)
 ![Prototipo com caminhos](https://user-images.githubusercontent.com/21364420/176427033-4f0d2e64-ce4e-4c8b-92cf-709a8e7448c9.jpg)
-
-[Link para o Protótipo Interativo](https://app.uizard.io/p/7e35d407)
