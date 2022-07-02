@@ -24,4 +24,5 @@
     <string name="alterar">Update</string>
     <string name="editar_evento">Edit Meeting</string>
     <string name="adiar">Postpone</string>
+    <string name="reuniao">Meeting</string>
 </resources>
