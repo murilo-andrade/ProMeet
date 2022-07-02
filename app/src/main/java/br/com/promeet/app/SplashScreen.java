@@ -1,15 +1,13 @@
 package br.com.promeet.app;
 
-import androidx.annotation.RequiresApi;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-
-import android.os.Build;
-import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 
 public class SplashScreen extends AppCompatActivity {
 
