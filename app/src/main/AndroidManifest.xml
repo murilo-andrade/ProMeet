@@ -17,10 +17,10 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".EditaEventoActivity"
+            android:name=".EventoActivity"
             android:exported="false" />
         <activity
-            android:name=".EditaGrupoActivity"
+            android:name=".GrupoActivity"
             android:exported="false" />
         <activity
             android:name=".GruposActivity"
