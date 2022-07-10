@@ -46,6 +46,31 @@
             />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextEmail"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:minHeight="48dp"
+        android:textColor="@color/branco"
+        android:textColorHint="@color/branco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCidade">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:background="@color/roxo"
+            android:textColor="@color/branco"
+            android:textColorHint="@color/branco"
+            android:hint="@string/email"
+            android:inputType="textAutoComplete"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -55,6 +80,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCidade" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

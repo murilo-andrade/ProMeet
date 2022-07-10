@@ -9,7 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class ConfigActivity extends AppCompatActivity {
-    private EditText editText = null;
+    private EditText editTextCidade = null;
+    private EditText editTextEmail = null;
     private SharedPreferences prefs = null;
 
     @Override
@@ -18,18 +19,26 @@ public class ConfigActivity extends AppCompatActivity {
         setContentView(R.layout.activity_config);
 
         Button button = findViewById(R.id.button);
-        editText = findViewById(R.id.editTextCidade);
+        editTextCidade = findViewById(R.id.editTextCidade);
+        editTextEmail = findViewById(R.id.editTextEmail);
         prefs = getSharedPreferences("syPrefs", MODE_PRIVATE);
         String cidade = prefs.getString("cidade","");
+        String email = prefs.getString("email","");
 
         if(cidade!=null){
-            editText.setText(cidade);
+            editTextCidade.setText(cidade);
         }
+
+        if(email!=null){
+            editTextEmail.setText(email);
+        }
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
                 SharedPreferences.Editor editPreferences = prefs.edit();
-                editPreferences.putString("cidade",ConfigActivity.this.editText.getText().toString());
+                editPreferences.putString("cidade",ConfigActivity.this.editTextCidade.getText().toString());
+                editPreferences.putString("email",ConfigActivity.this.editTextEmail.getText().toString());
                 editPreferences.apply();
                 finish();
             }
