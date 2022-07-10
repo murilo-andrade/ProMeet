@@ -11,8 +11,8 @@ todas as pessoas envolvidas no grupo de agendamento
 Requisitos
 - [X] Interface em Material Design
 - [X] Versionamento com GitHub
-- [ ] Persistência Leve (Preferências)
-- [ ] Persistência com SQLite
+- [X] Persistência Leve (Preferências)
+- [X] Persistência com SQLite
 - [ ] Comunicação via JSON
 - [X] Internacionalização
 - [ ] Analytics
