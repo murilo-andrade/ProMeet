@@ -25,4 +25,7 @@
     <string name="editar_evento">Editar Evento</string>
     <string name="adiar">Adiar</string>
     <string name="reuniao">Reunião</string>
+    <string name="configuracoes">Config</string>
+    <string name="cidade">Cidade</string>
+    <string name="salvar">Salvar</string>
 </resources>

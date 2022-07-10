@@ -25,4 +25,7 @@
     <string name="editar_evento">Edit Meeting</string>
     <string name="adiar">Postpone</string>
     <string name="reuniao">Meeting</string>
+    <string name="configuracoes">Settings</string>
+    <string name="cidade">City</string>
+    <string name="salvar">Save</string>
 </resources>
