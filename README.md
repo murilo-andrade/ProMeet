@@ -15,7 +15,7 @@ Requisitos
 - [X] Persistência com SQLite
 - [ ] Comunicação via JSON
 - [X] Internacionalização
-- [ ] Analytics
+- [X] Analytics
 - [ ] Permissões
 
 Mapa Conceitual do Aplicativo
