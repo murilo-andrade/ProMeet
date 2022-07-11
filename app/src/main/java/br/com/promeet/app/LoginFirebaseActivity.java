@@ -34,11 +34,11 @@ public class LoginFirebaseActivity extends AppCompatActivity {
 
     private void updateUI(FirebaseUser currentUser) {
     }
-
-    mAuth.createUserWithEmailAndPassword(email,password);
+    /*
+    mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
         @Override
-        public void onComplete(Task<AuthResult> task) {
+        public void onComplete(@NonNull Task<AuthResult> task) {
             if (task.isSuccessful()) {
                 // Sign in success, update UI with the signed-in user's information
                 Log.d(TAG, "createUserWithEmail:success");
@@ -47,12 +47,12 @@ public class LoginFirebaseActivity extends AppCompatActivity {
             } else {
                 // If sign in fails, display a message to the user.
                 Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                Toast.makeText(LoginFirebaseActivity.this, "Authentication failed.",
+                Toast.makeText(EmailPasswordActivity.this, "Authentication failed.",
                         Toast.LENGTH_SHORT).show();
                 updateUI(null);
             }
-
-            // ...
         }
     });
+    *
+     */
 }

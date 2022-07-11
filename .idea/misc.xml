@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Jehcky/Documents/CodingGround/ProMeet/app/src/main/res/layout/activity_agenda.xml" value="0.1984375" />
+        <entry key="..\:/Users/Jehcky/Documents/CodingGround/ProMeet/app/src/main/res/layout/activity_cadastro.xml" value="0.1802536231884058" />
+        <entry key="..\:/Users/Jehcky/Documents/CodingGround/ProMeet/app/src/main/res/layout/activity_cadastro_grupo.xml" value="0.1984375" />
+        <entry key="..\:/Users/Jehcky/Documents/CodingGround/ProMeet/app/src/main/res/layout/activity_config.xml" value="0.1984375" />
+        <entry key="..\:/Users/Jehcky/Documents/CodingGround/ProMeet/app/src/main/res/layout/activity_evento.xml" value="0.1984375" />
+        <entry key="..\:/Users/Jehcky/Documents/CodingGround/ProMeet/app/src/main/res/layout/activity_grupo.xml" value="0.1802536231884058" />
+        <entry key="..\:/Users/Jehcky/Documents/CodingGround/ProMeet/app/src/main/res/layout/activity_grupos.xml" value="0.1984375" />
+        <entry key="..\:/Users/Jehcky/Documents/CodingGround/ProMeet/app/src/main/res/layout/activity_login.xml" value="0.1802536231884058" />
+        <entry key="..\:/Users/Jehcky/Documents/CodingGround/ProMeet/app/src/main/res/layout/activity_splash_screen.xml" value="0.1984375" />
         <entry key="..\:/Users/Murilo/AndroidStudioProjects/ProMeet/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1955" />
         <entry key="..\:/Users/Murilo/AndroidStudioProjects/ProMeet/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1955" />
         <entry key="..\:/Users/Murilo/AndroidStudioProjects/ProMeet/app/src/main/res/font/montserrat.xml" value="0.4" />

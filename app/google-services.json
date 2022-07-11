@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "333958244428",
+    "project_id": "promeet-2a5c6",
+    "storage_bucket": "promeet-2a5c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333958244428:android:f95d7f9b1c57767379ece9",
+        "android_client_info": {
+          "package_name": "br.com.promeet.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333958244428-8kebla6701pmj06jbebags2ngqqpk24c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcxusQOJiuQkrQ_PyW5YQWO1mQMnbncVs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333958244428-8kebla6701pmj06jbebags2ngqqpk24c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
