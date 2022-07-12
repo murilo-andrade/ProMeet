@@ -38,14 +38,12 @@ public class SplashScreen extends AppCompatActivity {
         }
 
         SharedPreferences.Editor edPref = prefs.edit();
-        if(prefs.getString("cidade","") == null) {
-            Log.e("DEBUG","Sem cidade");
+        if(prefs.getString("cidade","") == "") {
             edPref.putString("cidade", "Salvador");
             edPref.apply();
 
         }
-        if(prefs.getString("email","") == null) {
-            Log.e("DEBUG","Sem email");
+        if(prefs.getString("email","") == "") {
             edPref.putString("email", "testuser@promeet.com.br");
             edPref.apply();
 
@@ -144,6 +142,7 @@ public class SplashScreen extends AppCompatActivity {
         int locationPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
         int bgLocationPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_BACKGROUND_LOCATION);
         int internetPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET);
+        int netStatePermission = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_NETWORK_STATE);
         List<String> listPermissionsNeeded = new ArrayList<>();
         if(locationPermission != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.ACCESS_COARSE_LOCATION);
@@ -153,6 +152,9 @@ public class SplashScreen extends AppCompatActivity {
         }
         if(internetPermission != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.INTERNET);
+        }
+        if(netStatePermission != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(Manifest.permission.ACCESS_NETWORK_STATE);
         }
         if(!listPermissionsNeeded.isEmpty()) {
             ActivityCompat.requestPermissions(

@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.FirebaseApp;
@@ -30,6 +31,7 @@ public class EventoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_evento);
         Button button = findViewById(R.id.button);
+        TextView topo = findViewById(R.id.textViewTop);
         FirebaseApp.initializeApp(EventoActivity.this);
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(EventoActivity.this);
 
@@ -52,7 +54,8 @@ public class EventoActivity extends AppCompatActivity {
 
         eventoSelecionado = (EventoValue) intent.getSerializableExtra("eventoSelecionado");
         if(eventoSelecionado!=null){
-            button.setText(R.string.editar_evento);
+            button.setText(R.string.alterar);
+            topo.setText(R.string.editar_evento);
             editTextEvento.setText(eventoSelecionado.getEvento());
             editTextData.setText(eventoSelecionado.getData());
             editTextHora.setText(eventoSelecionado.getHora());
