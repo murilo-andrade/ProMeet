@@ -83,7 +83,7 @@ public class EventoDAO extends SQLiteOpenHelper {
         values.put("data",eventoValue.getData());
         values.put("hora",eventoValue.getHora());
         values.put("local",eventoValue.getLocal());
-        getWritableDatabase().update("Disciplina", values,
+        getWritableDatabase().update("Eventos", values,
                 "id=?", new String[]{eventoValue.getId().toString()});
     }
 }
