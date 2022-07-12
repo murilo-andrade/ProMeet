@@ -28,4 +28,6 @@
     <string name="configuracoes">Config</string>
     <string name="cidade">Cidade</string>
     <string name="salvar">Salvar</string>
+    <string name="pegadados">Obtendo Dados</string>
+    <string name="cancela_evento">Cancelar Evento</string>
 </resources>

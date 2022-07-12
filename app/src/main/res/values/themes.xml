@@ -2,11 +2,11 @@
     <!-- Base application theme. -->
     <style name="Theme.ProMeet" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/roxo</item>
+        <item name="colorPrimary">@color/lilas</item>
         <item name="colorPrimaryVariant">@color/roxo</item>
         <item name="colorOnPrimary">@color/branco</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/roxo</item>
+        <item name="colorSecondary">@color/lilas</item>
         <item name="colorSecondaryVariant">@color/roxo</item>
         <item name="colorOnSecondary">@color/preto</item>
         <!-- Status bar color. -->

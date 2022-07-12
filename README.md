@@ -13,10 +13,10 @@ Requisitos
 - [X] Versionamento com GitHub
 - [X] Persistência Leve (Preferências)
 - [X] Persistência com SQLite
-- [ ] Comunicação via JSON
+- [X] Comunicação via JSON
 - [X] Internacionalização
 - [X] Analytics
-- [ ] Permissões
+- [X] Permissões
 
 Mapa Conceitual do Aplicativo
 ![Mapa Conceitual ProMeet](https://user-images.githubusercontent.com/21364420/176426518-1a47d3cd-c546-4580-9c32-f6bef24ac246.jpg)

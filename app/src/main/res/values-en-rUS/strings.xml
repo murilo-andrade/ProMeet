@@ -28,4 +28,6 @@
     <string name="configuracoes">Settings</string>
     <string name="cidade">City</string>
     <string name="salvar">Save</string>
+    <string name="pegadados">Getting Data</string>
+    <string name="cancela_evento">Cancel Meeting</string>
 </resources>

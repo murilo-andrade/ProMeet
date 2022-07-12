@@ -36,6 +36,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTop">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textCidade"
             android:layout_width="match_parent"
             android:background="@color/roxo"
             android:textColor="@color/branco"
@@ -61,6 +62,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextCidade">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEmail"
             android:layout_width="match_parent"
             android:background="@color/roxo"
             android:textColor="@color/branco"

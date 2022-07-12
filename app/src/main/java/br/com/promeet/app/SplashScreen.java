@@ -1,36 +1,55 @@
 package br.com.promeet.app;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.TextView;
-
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.commons.io.IOUtils;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SplashScreen extends AppCompatActivity {
     private static final int SPLASH_TIME_OUT = 3000;
-    private final TextView textView=null;
+    public static final int REQUEST_ID_MULTIPLE_PERMISSIONS = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+        SharedPreferences prefs = getSharedPreferences("syPrefs", MODE_PRIVATE);
+        if (checkAndRequestPermissions()) {
+        }
+
+        SharedPreferences.Editor edPref = prefs.edit();
+        if(prefs.getString("cidade","") == null) {
+            Log.e("DEBUG","Sem cidade");
+            edPref.putString("cidade", "Salvador");
+            edPref.apply();
+
+        }
+        if(prefs.getString("email","") == null) {
+            Log.e("DEBUG","Sem email");
+            edPref.putString("email", "testuser@promeet.com.br");
+            edPref.apply();
+
+        }
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
@@ -60,7 +79,7 @@ public class SplashScreen extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             pDialog= new ProgressDialog(SplashScreen.this);
-            pDialog.setMessage("Obtendo Dados");
+            pDialog.setMessage(getString(R.string.pegadados));
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
             pDialog.show();
@@ -69,19 +88,18 @@ public class SplashScreen extends AppCompatActivity {
         @Override
         protected JSONObject doInBackground(String... strings) {
             JSONObject json;
-            EventoDAO eventoDAO = new EventoDAO(SplashScreen.this);
-            eventoDAO.dropAll();
             JSONArray link;
             json = Json();
             try {
-                link = json.getJSONArray("Lista");
-                for (int i = 0; i < link.length(); i++) {
-                    String c = (String) link.get(i);
-                    EventoValue eventoValue = new EventoValue();
-                    eventoValue.setEvento(c);
-                    eventoDAO.salvar(eventoValue);
-                    eventoDAO.close();
-                }
+                link = json.getJSONArray("current");
+                SharedPreferences prefs = getSharedPreferences("syPrefs", MODE_PRIVATE);
+                SharedPreferences.Editor edPref = prefs.edit();
+                String c1 = (String) link.get(0);
+                edPref.putString("temperatura", c1);
+                edPref.apply();
+                String c2 = (String) link.get(1);
+                edPref.putString("tempo", new String(c2));
+                edPref.apply();
             }catch(Exception e){
                 e.printStackTrace();
             }
@@ -107,11 +125,9 @@ public class SplashScreen extends AppCompatActivity {
             JSONObject json;
             String resp;
             try {
-                URL api = new URL("https://weatherapi-com.p.rapidapi.com/current.json?lang=pt&q=Salvador");
+                URL api = new URL("https://www.sandiego.com.br/index-tempo.php");
                 HttpURLConnection conn = (HttpURLConnection) api.openConnection();
-                conn.setRequestProperty("X-RapidAPI-Key","c80485ddd9msh0c7ec6e2e9e75cap125d71jsn8a800a1c38db");
-                conn.setRequestProperty("X-RapidAPI-Host","weatherapi-com.p.rapidapi.com");
-                conn.setRequestProperty("Content-Type", "application/json");
+                conn.addRequestProperty("Content-Type", "application/json");
                 conn.setRequestMethod("GET");
                 conn.setDoOutput(true);
                 InputStream inputStream = conn.getInputStream();
@@ -123,6 +139,29 @@ public class SplashScreen extends AppCompatActivity {
             }
             return null;
         }
-
     }
+    private boolean checkAndRequestPermissions() {
+        int locationPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
+        int bgLocationPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_BACKGROUND_LOCATION);
+        int internetPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET);
+        List<String> listPermissionsNeeded = new ArrayList<>();
+        if(locationPermission != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(Manifest.permission.ACCESS_COARSE_LOCATION);
+        }
+        if(bgLocationPermission != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(Manifest.permission.ACCESS_BACKGROUND_LOCATION);
+        }
+        if(internetPermission != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(Manifest.permission.INTERNET);
+        }
+        if(!listPermissionsNeeded.isEmpty()) {
+            ActivityCompat.requestPermissions(
+                    this,
+                    listPermissionsNeeded.toArray(new String[listPermissionsNeeded.size()]),
+                    REQUEST_ID_MULTIPLE_PERMISSIONS);
+            return false;
+        }
+        return true;
+    }
+
 }

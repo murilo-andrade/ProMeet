@@ -21,7 +21,7 @@ public class EventoDAO extends SQLiteOpenHelper {
 
     public void onCreate(@NonNull SQLiteDatabase db) {
         String ddl ="CREATE TABLE Eventos (id INTEGER PRIMARY KEY,"
-                + " evento TEXT, usuario TEXT, grupoID INTEGER, data TEXT, hora TEXT, local TEXT);";
+                + " evento TEXT, usuario TEXT, data TEXT, hora TEXT, local TEXT);";
         db.execSQL(ddl);
     }
 
@@ -36,7 +36,6 @@ public class EventoDAO extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put("evento",eventoValue.getEvento());
         values.put("usuario",eventoValue.getUsuario());
-        values.put("grupoID",eventoValue.getGrupoID());
         values.put("data",eventoValue.getData());
         values.put("hora",eventoValue.getHora());
         values.put("local",eventoValue.getLocal());
@@ -55,10 +54,9 @@ public class EventoDAO extends SQLiteOpenHelper {
                 evento.setId(Long.parseLong(cursor.getString(0)));
                 evento.setEvento(cursor.getString(1));
                 evento.setUsuario(cursor.getString(2));
-                evento.setGrupoID(Long.parseLong(cursor.getString(3)));
-                evento.setData(cursor.getString(4));
-                evento.setHora(cursor.getString(5));
-                evento.setLocal(cursor.getString(6));
+                evento.setData(cursor.getString(3));
+                evento.setHora(cursor.getString(4));
+                evento.setLocal(cursor.getString(5));
                 eventos.add(evento);
             } while (cursor.moveToNext());
         }
@@ -82,7 +80,6 @@ public class EventoDAO extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put("evento",eventoValue.getEvento());
         values.put("usuario",eventoValue.getUsuario());
-        values.put("grupoID",eventoValue.getGrupoID());
         values.put("data",eventoValue.getData());
         values.put("hora",eventoValue.getHora());
         values.put("local",eventoValue.getLocal());

@@ -6,7 +6,6 @@ public class EventoValue implements java.io.Serializable {
     private Long id;
     private String evento;
     private String usuario;
-    private Long grupoID;
     private String data;
     private String hora;
     private String local;
@@ -14,7 +13,7 @@ public class EventoValue implements java.io.Serializable {
     @NonNull
     @Override
     public String toString(){
-        return getEvento();
+        return getEvento()+" - "+getData()+" - "+getHora();
     }
 
     public Long getId() {
@@ -39,14 +38,6 @@ public class EventoValue implements java.io.Serializable {
 
     public void setUsuario(String usuario) {
         this.usuario = usuario;
-    }
-
-    public Long getGrupoID() {
-        return grupoID;
-    }
-
-    public void setGrupoID(Long grupoID) {
-        this.grupoID = grupoID;
     }
 
     public String getData() {
