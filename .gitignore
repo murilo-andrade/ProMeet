@@ -15,3 +15,10 @@ app/build
 .cxx
 local.properties
 google-services.json
+caches
+gradle
+wrapper
+daemon
+native
+*.lock
+FakeDependency.jar
